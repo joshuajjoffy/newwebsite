@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply text-gray-800 bg-gradient-to-br from-primary-50 to-accent-50;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold;
+}
+
+.page-section {
+  @apply py-16 md:py-24;
+}
+
+.section-heading {
+  @apply text-3xl md:text-4xl font-bold mb-8 text-secondary-600;
+}
+
+.page-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.page-header {
+  @apply mb-12;
+}
+
+.page-title {
+  @apply text-4xl md:text-5xl font-bold text-primary-700 mb-4;
+}
+
+.page-subtitle {
+  @apply text-xl text-gray-600 max-w-3xl;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom gradient backgrounds */
+.gradient-primary {
+  @apply bg-gradient-to-br from-primary-500 to-primary-700;
+}
+
+.gradient-secondary {
+  @apply bg-gradient-to-br from-secondary-500 to-secondary-700;
+}
+
+.gradient-accent {
+  @apply bg-gradient-to-br from-accent-500 to-accent-700;
+}
+
+.gradient-tertiary {
+  @apply bg-gradient-to-br from-tertiary-500 to-tertiary-700;
+}
+
+/* Card hover effects */
+.hover-card {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-md hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-gradient-to-r from-secondary-600 to-secondary-700 text-white rounded-md hover:from-secondary-700 hover:to-secondary-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+}
+
+.btn-accent {
+  @apply px-6 py-3 bg-gradient-to-r from-accent-600 to-accent-700 text-white rounded-md hover:from-accent-700 hover:to-accent-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+}
+
+/* Digital Rain Animation */
+.digital-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.rain-column {
+  position: absolute;
+  top: -20px;
+  width: 1px;
+  height: 100%;
+  animation: rain 2s linear infinite;
+}
+
+.rain-column span {
+  float: left;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  animation: glow 1.5s linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
