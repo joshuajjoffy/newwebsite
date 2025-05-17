@@ -25,7 +25,7 @@ const MyProfile: React.FC = () => {
                 <div className="bg-gradient-to-r from-blue-500 to-blue-700 h-40"></div>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
                   <img 
-            src="file:///C:/Users/JOSHUA/Documents/WhatsApp%20Image%202025-05-17%20at%2008.34.40_6a6e956b.jpg" 
+                    src="/joshua-profile.jpg" 
                     alt="Joshua Arakkal" 
                     className="w-32 h-32 rounded-full border-4 border-white object-cover"
                   />
