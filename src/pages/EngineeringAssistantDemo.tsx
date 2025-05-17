@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Spline from '@splinetool/react-spline';
 import PageHeader from '../components/PageHeader';
 import SectionHeading from '../components/SectionHeading';
 import { Brain, Send, Code, BarChart, FileCode, CodepenIcon } from 'lucide-react';
@@ -9,7 +8,6 @@ const EngineeringAssistantDemo: React.FC = () => {
   const [userQuery, setUserQuery] = useState('');
   const [responses, setResponses] = useState<Array<{ query: string; response: string }>>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [splineLoaded, setSplineLoaded] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,19 +42,6 @@ const EngineeringAssistantDemo: React.FC = () => {
   return (
     <div className="pt-24 pb-16">
       <div className="page-container">
-        <div className="relative h-[600px] w-full mb-12 rounded-xl overflow-hidden bg-gray-100">
-          {!splineLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-            </div>
-          )}
-          <Spline
-            scene="https://prod.spline.design/a0282aeb-6821-493d-abb9-1fa04d9ef21d/scene.splinecode"
-            onLoad={() => setSplineLoaded(true)}
-            className={`w-full h-full ${splineLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
-          />
-        </div>
-
         <PageHeader 
           title="Engineering Assistant Demo" 
           subtitle="Experience a Gemini-powered AI assistant designed to provide technical information for engineering processes"

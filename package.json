@@ -10,8 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@splinetool/react-spline": "^2.2.6",
-    "@splinetool/runtime": "^1.0.51",
     "framer-motion": "^11.1.12",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
