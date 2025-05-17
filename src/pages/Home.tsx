@@ -78,9 +78,7 @@ const Home: React.FC = () => {
             >
               <div className="relative">
                 <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-200 rounded-full opacity-50 animate-pulse"></div>
-                <img 
-                  src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                  alt="Professional portrait" 
+                <img src="/joshua-profile.jpg" 
                   className="relative z-10 w-64 h-64 object-cover rounded-full border-4 border-white shadow-xl"
                 />
               </div>
