@@ -5,28 +5,16 @@ import { Code, Users, Briefcase, Brain, Database, Wrench } from 'lucide-react';
 
 const DigitalRain: React.FC = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-      <div className="digital-rain">
-        {Array.from({ length: 25 }).map((_, i) => (
-          <div key={i} className="rain-column" style={{ 
-            animationDelay: `${Math.random() * 2}s`,
-            left: `${i * 4}%`
-          }}>
-            {Array.from({ length: 25 }).map((_, j) => (
-              <span 
-                key={j} 
-                className="text-blue-400"
-                style={{ 
-                  animationDelay: `${Math.random() * 5}s`,
-                  opacity: Math.random()
-                }}
-              >
-                {String.fromCharCode(33 + Math.random() * 93)}
-              </span>
-            ))}
-          </div>
-        ))}
-      </div>
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("https://www.cyberciti.biz/media/new/cms/2018/01/small-cmtarix-file.gif")',
+          backgroundRepeat: 'repeat',
+          filter: 'hue-rotate(70deg)',
+          opacity: 0.3
+        }}
+      />
     </div>
   );
 };
